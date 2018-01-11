@@ -1,3 +1,9 @@
 *
 !.gitignore
 !.bashrc
+!.gvimrc
+!.iterm2
+!.npm
+!.sshrc
+!.vimrc
+!.zshrc
