@@ -1,3 +1,2 @@
 " Sets font for Vim inside MacVim
-set guifont=Meslo:h14
-
+set guifont=Meslo\ LG\ S\ DZ\ for\ Powerline:h15
