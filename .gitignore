@@ -1,4 +1,8 @@
 *
+!nvimrc
+!zshrc
+!zshrc.local
+!gvimrc
 !.gitignore
 !.bashrc
 !.gvimrc
