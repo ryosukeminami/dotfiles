@@ -4,12 +4,4 @@
 !zshrc.local
 !gvimrc
 !.gitignore
-!.bashrc
-!.gvimrc
-!.iterm2
-!.npm
-!.sshrc
-!.vimrc
-!.zshrc
-!.oh-my-zsh/
-!agnoster-alt.zsh-theme
+!installer.sh

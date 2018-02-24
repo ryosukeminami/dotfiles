@@ -29,6 +29,7 @@ if dein#load_state('~/.vim/bundles')
   call dein#add('w0rp/ale')                                    " Asynchronous linter for Vim
 
   " Language support
+  call dein#add('vim-scripts/c.vim')                           " Language support for C/C++
   call dein#add('python-mode/python-mode')                     " Language support for Python
   call dein#add('fatih/vim-go')                                " Language support for Go
   call dein#add('ternjs/tern_for_vim', {'do': 'npm install'})  " Language support for JavaScript
