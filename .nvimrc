@@ -29,6 +29,7 @@ if dein#load_state('~/.vim/bundles')
   call dein#add('w0rp/ale')                                    " Asynchronous linter for Vim
   call dein#add('mhinz/vim-startify')                          " Start screen
   call dein#add('ryanoasis/vim-devicons')                      " Use Nerd fonts for icons
+  call dein#add('edkolev/tmuxline.vim')                        " Status line for tmux
 
   " Language support
   call dein#add('vim-scripts/c.vim')                           " Language support for C/C++
@@ -118,9 +119,6 @@ set wildmode=longest,list,full
 
 " Enable basic mouse behavior such as resizing buffers.
 set mouse=a
-if exists('$TMUX')  " Support resizing in tmux
-  set ttymouse=xterm2
-endif
 
 " keyboard shortcuts
 let mapleader = ','
@@ -223,6 +221,7 @@ let g:airline_theme='one'                                    " Sets Airline them
 let g:airline_powerline_fonts = 1                            " Use Powerline fonts
 let g:airline#extensions#whitespace#enabled = 0              " Disables whitespace detection
 let g:airline_extensions = []                                " Disables all Airline extensions
+let g:airline#extensions#tmuxline#enabled = 1                " Sets tmuxline theme to match Airline theme
 " let g:airline#extensions#tabline#enabled = 1               " (disabled) Airline tab bar
 
 " ALE settings
