@@ -27,6 +27,8 @@ if dein#load_state('~/.vim/bundles')
   call dein#add('ctrlpvim/ctrlp.vim')                          " File search for Vim
   call dein#add('tpope/vim-commentary')                        " Quickly comment lines out
   call dein#add('w0rp/ale')                                    " Asynchronous linter for Vim
+  call dein#add('mhinz/vim-startify')                          " Start screen
+  call dein#add('ryanoasis/vim-devicons')                      " Use Nerd fonts for icons
 
   " Language support
   call dein#add('vim-scripts/c.vim')                           " Language support for C/C++
@@ -146,6 +148,8 @@ let g:ctrlp_match_window = 'order:ttb,max:20'
 let g:NERDSpaceDelims=1
 let g:gitgutter_enabled = 0                                  " Disable GitGutter by default
 let g:deoplete#enable_at_startup = 1                         " Enable Deoplete by default
+let g:webdevicons_enable_airline_statusline = 0              " Don't use devicons for Airline
+let g:WebDevIconsNerdTreeAfterGlyphPadding = ''              " Removes space after icons in NERDTree
 
 " Use The Silver Searcher https://github.com/ggreer/the_silver_searcher
 if executable('ag')
