@@ -6,3 +6,4 @@
 !.gitignore
 !.oh-my-zsh/
 !.iterm_profiles
+!.tmux.conf
