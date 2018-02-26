@@ -1,7 +1,6 @@
 *
-!nvimrc
-!zshrc
-!zshrc.local
-!gvimrc
+!.nvimrc
+!.zshrc
+!.zshrc.local
+!.gvimrc
 !.gitignore
-!installer.sh
