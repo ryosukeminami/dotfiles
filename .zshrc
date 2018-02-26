@@ -1,7 +1,7 @@
 # Path to your oh-my-zsh installation.
 export ZSH=$HOME/.oh-my-zsh
 
-# Geometry theme for zsh from https://github.com/geometry-zsh/geometry
+# Geometry theme for zsh https://github.com/geometry-zsh/geometry
 ZSH_THEME='geometry/geometry'
 
 # Geometry Theme Settings
@@ -12,7 +12,7 @@ PROMPT_GEOMETRY_GIT_SHOW_STASHES=false           # Disables stash symbol for Git
 PROMPT_GEOMETRY_GIT_CONFLICTS=true
 # PROMPT_GEOMETRY_COLORIZE_SYMBOL='true'
 
-plugins=(git tmux)
+plugins=(git tmux zsh-syntax-highlighting)
 source $ZSH/oh-my-zsh.sh
 
 export KEYTIMEOUT=1
