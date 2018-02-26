@@ -187,9 +187,6 @@ endif
 " Don't copy the contents of an overwritten selection.
 vnoremap p "_dP
 
-" Python 3 installation
-let g:python3_host_prog = '/usr/local/bin/python3'
-
 " Tern for JavaScript language tools
 let g:deoplete#sources#ternjs#tern_bin = '/usr/local/bin/tern'
 let g:deoplete#sources#ternjs#timeout = 1
@@ -234,3 +231,6 @@ let g:ale_linters = {
 \}
 let g:ale_linter_aliases = {'jsx': 'css'}
 
+if filereadable(expand("~/.vimrc.local"))
+  source ~/.vimrc.local
+endif
