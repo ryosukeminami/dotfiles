@@ -72,19 +72,6 @@ module.exports = {
         //     lightWhite: '#ffffff'
         // },
 
-        // MaterialTheme: {
-        //     // Set the theme variant,
-        //     // OPTIONS: 'Darker', 'Palenight', ''
-        //     theme: '',
-
-        //     // [Optional] Set the rgba() app background opacity, useful when enableVibrance is true
-        //     // OPTIONS: From 0.1 to 1
-        //     // backgroundOpacity: '0.8',
-
-        //     // [Optional] Set the accent color for the current active tab
-        //     accentColor: 'orange',
-        // },
-
         // the shell to run when spawning a new session (i.e. /usr/local/bin/fish)
         // if left empty, your system's login shell will be used by default
         shell: '/usr/local/bin/fish',
