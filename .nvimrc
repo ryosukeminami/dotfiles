@@ -231,6 +231,6 @@ let g:ale_linters = {
 \}
 let g:ale_linter_aliases = {'jsx': 'css'}
 
-if filereadable(expand("~/.vimrc.local"))
-  source ~/.vimrc.local
+if filereadable(expand("~/.nvimrc.local"))
+  source ~/.nvimrc.local
 endif
