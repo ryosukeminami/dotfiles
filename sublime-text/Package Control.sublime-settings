@@ -1,0 +1,34 @@
+{
+	"bootstrapped": true,
+	"in_process_packages":
+	[
+	],
+	"installed_packages":
+	[
+		"A File Icon",
+		"AutoFileName",
+		"Babel",
+		"Babel Snippets",
+		"Color Highlighter",
+		"Dotfiles Syntax Highlighting",
+		"EJS 2",
+		"ESLint",
+		"fish",
+		"Git",
+		"Handlebars",
+		"HTML-CSS-JS Prettify",
+		"HTML5",
+		"JavaScript Completions",
+		"jQuery",
+		"Material Theme",
+		"Oceanic Next Color Scheme",
+		"Package Control",
+		"PackageResourceViewer",
+		"Pretty JSON",
+		"Pug",
+		"ReactJS Snippets",
+		"Sass",
+		"SublimeLinter",
+		"SublimeLinter-eslint"
+	]
+}

@@ -1,0 +1,16 @@
+{
+	"color_scheme": "Packages/User/Color Highlighter/themes/Oceanic Next (SL).tmTheme",
+	"font_size": 14,
+	"ignored_packages":
+	[
+		"ESLint",
+		"JavaScript Completions",
+		"Vintage"
+	],
+	"line_padding_bottom": 2,
+	"line_padding_top": 2,
+	"material_theme_accent_scrollbars": true,
+	"material_theme_arrow_folders": true,
+	"scroll_past_end": true,
+	"theme": "Material-Theme.sublime-theme"
+}
