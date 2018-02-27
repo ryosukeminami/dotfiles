@@ -86,6 +86,6 @@ alias fh='open -a Finder .'
 # [ -s '$NVM_DIR/bash_completion' ] && \. '$NVM_DIR/bash_completion'  # This loads nvm bash_completion
 
 
-if [[ -a $HOME/.zshrc.local ]]; then
+if [[ -f $HOME/.zshrc.local ]]; then
   source $HOME/.zshrc.local
 fi
