@@ -16,6 +16,7 @@ alias bls='brew list'
 alias bsr='brew search'
 alias binf='brew info'
 alias bdr='brew doctor'
+alias bcl='brew cleanup'
 
 # NeoVim is the only text editor you need
 alias v='nvim'
@@ -28,12 +29,14 @@ alias yi='yarn install'
 alias yu='yarn upgrade'
 alias ys='yarn start'
 alias yd='yarn run dev'
+alias yb='yarn build'
 
 # Aliases for npm
 alias ns='npm start'
 alias ni='npm install'
 alias nu='npm upgrade'
 alias nd='npm run dev'
+alias nb='npm build'
 
 # Aliases for Python
 alias pi='pip install'
