@@ -5,6 +5,7 @@
 	[
 		"ESLint",
 		"JavaScript Completions",
+		"SublimeLinter",
 		"Vintage"
 	],
 	"line_padding_bottom": 2,

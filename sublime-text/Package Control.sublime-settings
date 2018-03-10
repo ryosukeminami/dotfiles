@@ -9,6 +9,7 @@
 		"AutoFileName",
 		"Babel",
 		"Babel Snippets",
+		"Better CoffeeScript",
 		"Color Highlighter",
 		"Dotfiles Syntax Highlighting",
 		"EJS 2",
@@ -27,8 +28,6 @@
 		"Pretty JSON",
 		"Pug",
 		"ReactJS Snippets",
-		"Sass",
-		"SublimeLinter",
-		"SublimeLinter-eslint"
+		"Sass"
 	]
 }
