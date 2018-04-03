@@ -145,9 +145,11 @@ cnoremap w!! %!sudo tee > /dev/null %
 let g:ctrlp_match_window = 'order:ttb,max:20'
 let g:NERDSpaceDelims=1
 let g:gitgutter_enabled = 0                                  " Disable GitGutter by default
+let g:NERDTreeShowHidden = 1                                 " Show hidden files in NERDTree
+let g:NERDTreeWinSize= 28                                    " Set NERDTree width
 let g:deoplete#enable_at_startup = 1                         " Enable Deoplete by default
 let g:webdevicons_enable_airline_statusline = 0              " Don't use devicons for Airline
-let g:WebDevIconsNerdTreeAfterGlyphPadding = ''              " Removes space after icons in NERDTree
+let g:WebDevIconsNerdTreeAfterGlyphPadding = ' '             " Removes space after icons in NERDTree
 
 " Use The Silver Searcher https://github.com/ggreer/the_silver_searcher
 if executable('ag')
