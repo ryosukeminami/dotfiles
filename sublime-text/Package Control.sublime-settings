@@ -11,8 +11,10 @@
 		"Babel Snippets",
 		"Better CoffeeScript",
 		"Color Highlighter",
+		"Dockerfile Syntax Highlighting",
 		"Dotfiles Syntax Highlighting",
 		"EJS 2",
+		"Elm Language Support",
 		"ESLint",
 		"fish",
 		"Git",
@@ -20,6 +22,7 @@
 		"HTML-CSS-JS Prettify",
 		"HTML5",
 		"JavaScript Completions",
+		"JavaScript Ultimate",
 		"jQuery",
 		"Material Theme",
 		"Oceanic Next Color Scheme",
@@ -28,6 +31,10 @@
 		"Pretty JSON",
 		"Pug",
 		"ReactJS Snippets",
-		"Sass"
+		"rsub",
+		"Sass",
+		"TypeScript",
+		"Vue Syntax Highlight",
+		"Vuejs Complete Package"
 	]
 }
