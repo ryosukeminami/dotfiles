@@ -44,6 +44,8 @@ if dein#load_state('~/.vim/bundles')
   call dein#add('othree/html5.vim')                            " Syntax highlighting for HTML5
   call dein#add('HerringtonDarkholme/yats.vim')                " Syntax highlighting for TypeScript
   call dein#add('nikvdp/ejs-syntax')                           " Syntax highlighting for EJS
+  call dein#add('ElmCast/elm-vim')                             " Syntax highlighting for Elm
+  call dein#add('posva/vim-vue')                               " Syntax highlighting for Vue
 
   " Color schemes
   call dein#add('rakr/vim-one')                                " One color scheme, ported from Atom
@@ -176,6 +178,9 @@ autocmd User Rails silent! Rnavcommand mediator       app/mediators             
 autocmd User Rails silent! Rnavcommand stepdefinition features/step_definitions -glob=**/* -suffix=_steps.rb
 " automatically rebalance windows on vim resize
 autocmd VimResized * :wincmd =
+
+" fixes syntax highlighting in Vue files
+autocmd FileType vue syntax sync fromstart
 
 " Fix Cursor in TMUX
 if exists('$TMUX')
