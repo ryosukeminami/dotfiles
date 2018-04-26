@@ -54,6 +54,7 @@ alias yu='yarn upgrade'
 alias ys='yarn start'
 alias yb='yarn build'
 alias yd='yarn run dev'
+alias yui='yarn upgrade-interactive'
 
 # Aliases for npm
 alias ns='npm start'
@@ -66,7 +67,6 @@ alias nd='npm run dev'
 alias pi='pip install'
 
 # Additional aliases for Git
-alias gch='git checkout'
 
 # Just to be lazy
 alias x='exit'
