@@ -30,6 +30,7 @@ if dein#load_state('~/.vim/bundles')
   call dein#add('mhinz/vim-startify')                          " Start screen
   call dein#add('ryanoasis/vim-devicons')                      " Use Nerd fonts for icons
   call dein#add('edkolev/tmuxline.vim')                        " Status line for tmux
+  call dein#add('mileszs/ack.vim')                             " ack and ag in Vim
 
   " Language support
   call dein#add('vim-scripts/c.vim')                           " Language support for C/C++
