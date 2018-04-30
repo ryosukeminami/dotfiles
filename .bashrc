@@ -1,8 +1,8 @@
 # Load RVM into a shell session *as a function*
 [[ -s "$HOME/.rvm/scripts/rvm" ]] && source "$HOME/.rvm/scripts/rvm" 
 
-eval $(/usr/libexec/path_helper -s)
-eval "$(rbenv init -)"
+# eval $(/usr/libexec/path_helper -s)
+# eval "$(rbenv init -)"
 
 # iTerm 2 Shell integration
 test -e "${HOME}/.iterm2_shell_integration.bash" && source "${HOME}/.iterm2_shell_integration.bash"
