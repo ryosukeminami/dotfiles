@@ -45,7 +45,7 @@ alias bcl='brew cleanup'
 # NeoVim is the only text editor you need
 alias v='nvim'
 alias vi='nvim'
-alias vim='nvim'
+# alias vim='nvim'
 
 # Aliases for yarn
 alias ya='yarn add'
