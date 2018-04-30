@@ -31,12 +31,14 @@ if dein#load_state('~/.vim/bundles')
   call dein#add('ryanoasis/vim-devicons')                      " Use Nerd fonts for icons
   call dein#add('edkolev/tmuxline.vim')                        " Status line for tmux
   call dein#add('mileszs/ack.vim')                             " ack and ag in Vim
+  call dein#add('jiangmiao/auto-pairs')                        " Auto-closing of brackets
 
   " Language support
   call dein#add('vim-scripts/c.vim')                           " Language support for C/C++
   call dein#add('python-mode/python-mode')                     " Language support for Python
   call dein#add('fatih/vim-go')                                " Language support for Go
   call dein#add('ternjs/tern_for_vim', {'do': 'npm install'})  " Language support for JavaScript
+  call dein#add('zah/nim.vim')                                 " Language support for Nim
 
   " Syntax highlighting
   call dein#add('slim-template/vim-slim')                      " Slim syntax highlighting
