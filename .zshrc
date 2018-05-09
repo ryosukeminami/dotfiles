@@ -9,6 +9,7 @@ GEOMETRY_PROMPT_PLUGINS=(virtualenv git jobs)    # Plugins
 GEOMETRY_COLOR_PROMPT=blue                       # Changes prompt symbol color
 PROMPT_GEOMETRY_EXEC_TIME=true                   # Displays process time for long commands
 PROMPT_GEOMETRY_GIT_SHOW_STASHES=false           # Disables stash symbol for Git plugin
+PROMPT_GEOMETRY_GIT_TIME=false                   # Disables time since last commit
 PROMPT_GEOMETRY_GIT_CONFLICTS=true
 # PROMPT_GEOMETRY_COLORIZE_SYMBOL='true'
 
@@ -87,7 +88,9 @@ alias fh='open -a Finder .'
 # export NVM_DIR='$HOME/.nvm'
 # [ -s '$NVM_DIR/nvm.sh' ] && \. '$NVM_DIR/nvm.sh'  # This loads nvm
 # [ -s '$NVM_DIR/bash_completion' ] && \. '$NVM_DIR/bash_completion'  # This loads nvm bash_completion
-
+if [[ -f $HOME/.profile ]]; then
+    source $HOME/.profile
+fi
 
 if [[ -f $HOME/.zshrc.local ]]; then
   source $HOME/.zshrc.local
