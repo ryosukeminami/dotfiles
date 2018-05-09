@@ -36,7 +36,7 @@ if dein#load_state('~/.vim/bundles')
   " Language support
   call dein#add('vim-scripts/c.vim')                           " Language support for C/C++
   call dein#add('python-mode/python-mode')                     " Language support for Python
-  call dein#add('fatih/vim-go')                                " Language support for Go
+  call dein#add('fatih/vim-go', {'do': ':GoUpdateBinaries'})   " Language support for Go
   call dein#add('ternjs/tern_for_vim', {'do': 'npm install'})  " Language support for JavaScript
   call dein#add('zah/nim.vim')                                 " Language support for Nim
 
@@ -121,6 +121,7 @@ set tabstop=4                                                " actual tabs occup
 set wildignore=log/**,node_modules/**,target/**,tmp/**,*.rbc
 set wildmenu                                                 " show a navigable menu for tab completion
 set wildmode=longest,list,full
+set nofoldenable                                             " disable folding
 
 " Enable basic mouse behavior such as resizing buffers.
 set mouse=a
