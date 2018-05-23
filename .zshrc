@@ -2,7 +2,7 @@
 export ZSH=$HOME/.oh-my-zsh
 
 # Geometry theme for zsh https://github.com/geometry-zsh/geometry
-ZSH_THEME='geometry/geometry'
+ZSH_THEME='geometry'
 
 # Geometry Theme Settings
 GEOMETRY_PROMPT_PLUGINS=(virtualenv git jobs)    # Plugins
@@ -79,8 +79,6 @@ alias unix2dosr='find . -type f -print0 | xargs -0 unix2dos'
 
 # Desktop Programs
 alias xcode='open -a /Applications/XCode.app'
-alias safari='open -a /Applications/Safari.app'
-alias chrome='open -a /Applications/Google\ Chrome.app'
 alias f='open -a Finder '
 alias fh='open -a Finder .'
 
