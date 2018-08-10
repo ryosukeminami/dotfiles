@@ -95,6 +95,8 @@ endif
 
 "End dein Scripts-------------------------
 
+set rtp+=/usr/local/opt/fzf
+
 set autoindent
 set autoread                                                 " reload files when changed on disk
 set backspace=2                                              " Fix broken backspace in some setups
