@@ -56,6 +56,7 @@ alias ys='yarn start'
 alias yb='yarn build'
 alias yd='yarn run dev'
 alias yui='yarn upgrade-interactive'
+alias ydp='yarn deploy'
 
 # Aliases for npm
 alias ns='npm start'
@@ -66,8 +67,6 @@ alias nd='npm run dev'
 
 # Aliases for Python
 alias pi='pip install'
-
-# Additional aliases for Git
 
 # Just to be lazy
 alias x='exit'
@@ -81,11 +80,8 @@ alias unix2dosr='find . -type f -print0 | xargs -0 unix2dos'
 alias xcode='open -a /Applications/XCode.app'
 alias f='open -a Finder '
 alias fh='open -a Finder .'
+alias julia='exec /Applications/Julia-1.0.app/Contents/Resources/julia/bin/julia'
 
-
-# export NVM_DIR='$HOME/.nvm'
-# [ -s '$NVM_DIR/nvm.sh' ] && \. '$NVM_DIR/nvm.sh'  # This loads nvm
-# [ -s '$NVM_DIR/bash_completion' ] && \. '$NVM_DIR/bash_completion'  # This loads nvm bash_completion
 if [[ -f $HOME/.profile ]]; then
     source $HOME/.profile
 fi
@@ -93,3 +89,5 @@ fi
 if [[ -f $HOME/.zshrc.local ]]; then
   source $HOME/.zshrc.local
 fi
+
+. /Users/ryosuke/torch/install/bin/torch-activate
