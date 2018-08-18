@@ -80,7 +80,6 @@ alias unix2dosr='find . -type f -print0 | xargs -0 unix2dos'
 alias xcode='open -a /Applications/XCode.app'
 alias f='open -a Finder '
 alias fh='open -a Finder .'
-alias julia='exec /Applications/Julia-1.0.app/Contents/Resources/julia/bin/julia'
 
 if [[ -f $HOME/.profile ]]; then
     source $HOME/.profile
@@ -90,4 +89,3 @@ if [[ -f $HOME/.zshrc.local ]]; then
   source $HOME/.zshrc.local
 fi
 
-. /Users/ryosuke/torch/install/bin/torch-activate

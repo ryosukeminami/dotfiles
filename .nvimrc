@@ -39,6 +39,7 @@ if dein#load_state('~/.vim/bundles')
   call dein#add('fatih/vim-go', {'do': ':GoUpdateBinaries'})   " Language support for Go
   call dein#add('ternjs/tern_for_vim', {'do': 'npm install'})  " Language support for JavaScript
   call dein#add('zah/nim.vim')                                 " Language support for Nim
+  call dein#add('JuliaEditorSupport/julia-vim')                " Language support for Julia
 
   " Syntax highlighting
   call dein#add('slim-template/vim-slim')                      " Slim syntax highlighting
