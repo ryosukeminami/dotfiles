@@ -32,6 +32,13 @@ unsetopt correct_all
 export GOPATH=$HOME/Documents/go
 export PATH=$PATH:/usr/local/go/bin:$GOPATH/bin
 
+# Replacing some command line tools with prettier versions
+alias cat='bat'
+alias ping='prettyping --nolegend'
+
+# nnn for file navigation
+alias n='nnn'
+
 # Some aliases for Homebrew
 alias bu='brew update && brew upgrade'
 alias bout='brew outdated'
@@ -80,6 +87,8 @@ alias unix2dosr='find . -type f -print0 | xargs -0 unix2dos'
 alias xcode='open -a /Applications/XCode.app'
 alias f='open -a Finder '
 alias fh='open -a Finder .'
+
+export BAT_THEME='TwoDark'
 
 if [[ -f $HOME/.profile ]]; then
     source $HOME/.profile
