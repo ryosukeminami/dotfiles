@@ -62,3 +62,6 @@ alias fh='open -a Finder .'
 if [[ -f $HOME/.bashrc.local ]]; then
   source $HOME/.bashrc.local
 fi
+
+# added by Anaconda3 installer
+export PATH="$HOME/Applications/anaconda3/bin:$PATH"
