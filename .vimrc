@@ -17,6 +17,7 @@ if dein#load_state('~/.vim/bundles')
   " Add or remove your plugins here:
   call dein#add('Shougo/neosnippet.vim')
   call dein#add('Shougo/neosnippet-snippets')
+  call dein#add('Shougo/denite.nvim')
 
   " Custom plugins
   call dein#add('vim-airline/vim-airline')                     " Status/tab line for Vim
