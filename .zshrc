@@ -31,6 +31,7 @@ unsetopt correct_all
 
 export GOPATH=$HOME/Documents/go
 export PATH=$PATH:/usr/local/go/bin:$GOPATH/bin
+export PATH=/usr/local/opt/openssl@1.1/bin:$PATH
 
 # Replacing some command line tools with prettier versions
 alias cat='bat'
@@ -89,6 +90,8 @@ alias f='open -a Finder '
 alias fh='open -a Finder .'
 
 export BAT_THEME='TwoDark'
+
+export NVM_DIR="$HOME/.nvm"
 
 if [[ -f $HOME/.profile ]]; then
     source $HOME/.profile
