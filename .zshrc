@@ -31,7 +31,7 @@ unsetopt correct_all
 
 export GOPATH=$HOME/Documents/go
 export PATH=$PATH:/usr/local/go/bin:$GOPATH/bin
-export PATH=/usr/local/opt/openssl@1.1/bin:$PATH
+export PATH=$PATH:/usr/local/opt/openssl@1.1/bin:$PATH
 
 # Replacing some command line tools with prettier versions
 alias cat='bat'
@@ -75,6 +75,12 @@ alias nd='npm run dev'
 
 # Aliases for Python
 alias pi='pip install'
+
+# Aliases for conda
+alias cua='conda update --all'
+alias cca='conda clean --all'
+alias csa='source activate'
+alias csd='source deactivate'
 
 # Just to be lazy
 alias x='exit'
