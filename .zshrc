@@ -29,6 +29,14 @@ export ARCHFLAGS='-arch x86_64'
 
 unsetopt correct_all
 
+# Java path
+export JAVA_HOME=`/usr/libexec/java_home -v 11`
+export PATH=$JAVA_HOME/bin:$PATH
+
+# jEnv for Java environment management
+export PATH=$HOME/.jenv/bin:$PATH
+eval "$(jenv init -)"
+
 export GOPATH=$HOME/Documents/go
 export PATH=$PATH:/usr/local/go/bin:$GOPATH/bin
 export PATH=$PATH:/usr/local/opt/openssl@1.1/bin:$PATH
