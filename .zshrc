@@ -40,6 +40,7 @@ eval "$(jenv init -)"
 export GOPATH=$HOME/Documents/go
 export PATH=$PATH:/usr/local/go/bin:$GOPATH/bin
 export PATH=$PATH:/usr/local/opt/openssl@1.1/bin:$PATH
+export PATH=$PATH:$HOME/.local/bin:$PATH
 
 # Replacing some command line tools with prettier versions
 alias cat='bat'
