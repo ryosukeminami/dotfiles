@@ -29,18 +29,13 @@
         "scrollbarSlider.activeBackground": "#61616150",
         "notificationLink.foreground": "#616161"
     },
-    "materialTheme.cache.workbench.settings": {
-        "accent": "Graphite",
-        "themeColours": "Default",
-        "accentPrevious": "Blue"
-    },
     "explorer.confirmDragAndDrop": false,
     "files.autoSave": "afterDelay",
     "python.pythonPath": "/usr/local/anaconda3/bin/python",
-    "materialTheme.fixIconsRunning": false,
     "julia.enableTelemetry": true,
     "julia.executablePath": "/usr/local/bin/julia",
-    "vsicons.projectDetection.autoReload": true,
     "editor.minimap.enabled": false,
-    "editor.multiCursorModifier": "ctrlCmd"
+    "editor.multiCursorModifier": "ctrlCmd",
+    "java.home": "~/.jenv/versions/oracle64-1.8.0.60",
+    "materialTheme.autoApplyIcons": false
 }
