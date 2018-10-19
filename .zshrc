@@ -43,7 +43,7 @@ export PATH=$PATH:/usr/local/opt/openssl@1.1/bin:$PATH
 export PATH=$PATH:$HOME/.local/bin:$PATH
 
 # Replacing some command line tools with prettier versions
-alias cat='bat'
+# alias cat='bat'
 alias ping='prettyping --nolegend'
 
 # nnn for file navigation
@@ -88,8 +88,8 @@ alias pi='pip install'
 # Aliases for conda
 alias cua='conda update --all'
 alias cca='conda clean --all'
-alias csa='source activate'
-alias csd='source deactivate'
+alias csa='conda activate'
+alias csd='conda deactivate'
 
 # Just to be lazy
 alias x='exit'
