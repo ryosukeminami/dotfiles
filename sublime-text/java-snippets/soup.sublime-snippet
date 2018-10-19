@@ -1,7 +1,0 @@
-<snippet>
-	<content><![CDATA[
-System.out.print(${1:});
-]]></content>
-	<tabTrigger>soup</tabTrigger>
-	<scope>source.java</scope>
-</snippet>

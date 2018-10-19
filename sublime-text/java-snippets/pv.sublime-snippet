@@ -1,9 +1,0 @@
-<snippet>
-	<content><![CDATA[
-public void ${1:methodName}() {
-	${2:// insert code}
-}
-]]></content>
-	<tabTrigger>pv</tabTrigger>
-	<scope>source.java</scope>
-</snippet>

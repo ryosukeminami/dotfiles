@@ -1,9 +1,0 @@
-<snippet>
-	<content><![CDATA[
-public static void main(String[] args) {
-	${1:}
-}
-]]></content>
-	<tabTrigger>psvm</tabTrigger>
-	<scope>source.java</scope>
-</snippet>
