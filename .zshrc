@@ -81,15 +81,19 @@ alias ni='npm install'
 alias nu='npm upgrade'
 alias nb='npm build'
 alias nd='npm run dev'
+alias ngui='npm-check -gui'
 
 # Aliases for Python
 alias pi='pip install'
 
 # Aliases for conda
-alias cua='conda update --all'
-alias cca='conda clean --all'
+alias cua='conda update --all -y'
+alias cca='conda clean --all -y'
 alias csa='conda activate'
 alias csd='conda deactivate'
+
+# Alias for Jupyter notebook
+alias jn='jupyter notebook'
 
 # Just to be lazy
 alias x='exit'
