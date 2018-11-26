@@ -13,12 +13,14 @@ PROMPT_GEOMETRY_GIT_TIME=false                   # Disables time since last comm
 PROMPT_GEOMETRY_GIT_CONFLICTS=true
 # PROMPT_GEOMETRY_COLORIZE_SYMBOL='true'
 
+NAME=""
+
 # Check OS version
-if [ -f /etc/os-release ]; then
+if [[ -f /etc/os-release ]]; then
   . /etc/os-release
 fi
 
-if [ $NAME = 'Scientific Linux' ]; then
+if [[ $NAME = "Scientific Linux" ]]; then
   plugins=(git tmux)
 else
   plugins=(git tmux zsh-syntax-highlighting)
