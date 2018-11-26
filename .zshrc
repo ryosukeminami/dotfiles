@@ -13,7 +13,17 @@ PROMPT_GEOMETRY_GIT_TIME=false                   # Disables time since last comm
 PROMPT_GEOMETRY_GIT_CONFLICTS=true
 # PROMPT_GEOMETRY_COLORIZE_SYMBOL='true'
 
-plugins=(git tmux zsh-syntax-highlighting)
+# Check OS version
+if [ -f /etc/os-release ]; then
+  . /etc/os-release
+fi
+
+if [ $NAME = 'Scientific Linux' ]; then
+  plugins=(git tmux)
+else
+  plugins=(git tmux zsh-syntax-highlighting)
+fi
+
 source $ZSH/oh-my-zsh.sh
 
 export KEYTIMEOUT=1
@@ -29,25 +39,10 @@ export ARCHFLAGS='-arch x86_64'
 
 unsetopt correct_all
 
-# Java path
-export JAVA_HOME=`/usr/libexec/java_home -v 11`
-export PATH=$JAVA_HOME/bin:$PATH
-
-# jEnv for Java environment management
-export PATH=$HOME/.jenv/bin:$PATH
-eval "$(jenv init -)"
-
 export GOPATH=$HOME/Documents/go
 export PATH=$PATH:/usr/local/go/bin:$GOPATH/bin
 export PATH=$PATH:/usr/local/opt/openssl@1.1/bin:$PATH
 export PATH=$PATH:$HOME/.local/bin:$PATH
-
-# Replacing some command line tools with prettier versions
-# alias cat='bat'
-alias ping='prettyping --nolegend'
-
-# nnn for file navigation
-alias n='nnn'
 
 # Some aliases for Homebrew
 alias bu='brew update && brew upgrade'
@@ -107,10 +102,6 @@ alias unix2dosr='find . -type f -print0 | xargs -0 unix2dos'
 alias xcode='open -a /Applications/XCode.app'
 alias f='open -a Finder '
 alias fh='open -a Finder .'
-
-export BAT_THEME='TwoDark'
-
-export NVM_DIR="$HOME/.nvm"
 
 if [[ -f $HOME/.profile ]]; then
     source $HOME/.profile
