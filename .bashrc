@@ -1,12 +1,3 @@
-# Load RVM into a shell session *as a function*
-[[ -s "$HOME/.rvm/scripts/rvm" ]] && source "$HOME/.rvm/scripts/rvm" 
-
-# eval $(/usr/libexec/path_helper -s)
-# eval "$(rbenv init -)"
-
-# iTerm 2 Shell integration
-test -e "${HOME}/.iterm2_shell_integration.bash" && source "${HOME}/.iterm2_shell_integration.bash"
-
 # Some aliases for Homebrew
 alias bu='brew update && brew upgrade'
 alias bout='brew outdated'
@@ -62,9 +53,6 @@ alias fh='open -a Finder .'
 if [[ -f $HOME/.bashrc.local ]]; then
   source $HOME/.bashrc.local
 fi
-
-# added by Anaconda3 installer
-export PATH="$HOME/Applications/anaconda3/bin:$PATH"
 
 export NVM_DIR="$HOME/.nvm"
 [ -s "$NVM_DIR/nvm.sh" ] && \. "$NVM_DIR/nvm.sh"  # This loads nvm
