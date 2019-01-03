@@ -2,7 +2,11 @@
 # xcode-select --install
 
 # Install homebrew
-# /usr/bin/ruby -e "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/master/install)"
+/usr/bin/ruby -e "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/master/install)"
+
+# Configure git
+git config --global user.name "Ryosuke Minami"
+git config --global user.email "ryosukem13@gmail.com"
 
 # Install essential command line tools
 brew install zsh
