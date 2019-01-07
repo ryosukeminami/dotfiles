@@ -4,15 +4,15 @@ if &compatible
 endif
 
 " Required:
-set rtp+=$HOME/.vim/bundles/repos/github.com/Shougo/dein.vim
+set rtp+=$HOME/.cache/dein/repos/github.com/Shougo/dein.vim
 
 " Required:
-if dein#load_state('~/.vim/bundles')
-  call dein#begin('~/.vim/bundles')
+if dein#load_state('~/.cache/dein')
+  call dein#begin('~/.cache/dein')
 
   " Let dein manage dein
   " Required:
-  call dein#add('~/.vim/bundles/repos/github.com/Shougo/dein.vim')
+  call dein#add('~/.cache/dein/repos/github.com/Shougo/dein.vim')
 
   " Add or remove your plugins here:
   call dein#add('Shougo/neosnippet.vim')

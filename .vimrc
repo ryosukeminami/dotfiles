@@ -4,15 +4,15 @@ if &compatible
 endif
 
 " Required:
-set runtimepath+=/Users/ryosuke/.vim/bundles/repos/github.com/Shougo/dein.vim
+set runtimepath+=/Users/ryosuke/.cache/dein/repos/github.com/Shougo/dein.vim
 
 " Required:
-if dein#load_state('~/.vim/bundles')
-  call dein#begin('~/.vim/bundles')
+if dein#load_state('~/.cache/dein')
+  call dein#begin('~/.cache/dein')
 
   " Let dein manage dein
   " Required:
-  call dein#add('~/.vim/bundles/repos/github.com/Shougo/dein.vim')
+  call dein#add('~/.cache/dein/repos/github.com/Shougo/dein.vim')
 
   " Add or remove your plugins here:
   call dein#add('Shougo/neosnippet.vim')
@@ -216,5 +216,3 @@ let g:ale_linters = {
 \   'javascript': ['eslint'],
 \}
 
-" Sets font for MacVim
-" set guifont='Meslo LG S DZ Regular for Powerline':h14
