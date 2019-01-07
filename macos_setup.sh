@@ -16,15 +16,25 @@ brew install tree
 brew install ack
 brew install the_silver_searcher
 brew install mas
+brew install tmux
+brew install bat
+brew install topgrade
 
 # Install MacOS applications
 brew cask install iterm2
+brew cask install dropbox
 brew cask install sublime-text
 brew cask install google-chrome
 brew cask install google-japanese-ime
 brew cask install spotify
 brew cask install visual-studio-code
+brew cask install atom
 brew cask install vlc
+brew cask install iina
+brew cask install google-backup-and-sync
+brew cask install android-file-transfer
+brew cask install pocket-casts
+brew cask install firefox
 
 # Install Mac Apps from App Store
 mas install 918858936 # Airmail
@@ -48,3 +58,11 @@ brew cask install font-roboto-mono
 brew cask install font-meslo-for-powerline
 brew cask install font-meslo-nerd-font-mono
 brew cask install font-fira-code
+
+# Install languages
+brew install python3
+brew cask install java
+
+# Install language tools
+brew install gradle
+
