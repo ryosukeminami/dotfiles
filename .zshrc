@@ -10,8 +10,10 @@ PROMPT_GEOMETRY_GIT_SHOW_STASHES=false           # Disables stash symbol for git
 PROMPT_GEOMETRY_GIT_TIME=false                   # Disables time since last commit
 PROMPT_GEOMETRY_GIT_CONFLICTS=true               # Enables git conflicts icon
 
+
+# If the OS is MacOS, use "usr/local/opt/zplug"
 if [ "$(uname 2> /dev/null)" = "Darwin" ]; then
-	export ZPLUG_HOME="/usr/local/opt/zplug"
+	export ZPLUG_HOME=/usr/local/opt/zplug
 else
 	export ZPLUG_HOME=$HOME/.zplug
 fi

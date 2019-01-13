@@ -1,11 +1,17 @@
 {
+	"auto_complete_triggers":
+	[
+		{
+			"characters": ".",
+			"selector": "source.python"
+		}
+	],
 	"color_scheme": "Packages/Materialize/schemes/Material One Dark.tmTheme",
 	"font_face": "Fira Code",
 	"font_size": 15,
 	"ignored_packages":
 	[
-		"Vintage"
 	],
 	"theme": "Material One Dark.sublime-theme",
-	"auto_complete_triggers": [{"selector": "source.python", "characters": "."}],
+	"scroll_past_end": true
 }
