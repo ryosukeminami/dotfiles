@@ -1,0 +1,14 @@
+{
+	"bootstrapped": true,
+	"in_process_packages":
+	[
+	],
+	"installed_packages":
+	[
+		"Babel",
+		"Dotfiles Syntax Highlighting",
+		"Jedi - Python autocompletion",
+		"Materialize",
+		"Package Control"
+	]
+}
