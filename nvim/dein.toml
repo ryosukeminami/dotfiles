@@ -17,11 +17,41 @@ repo = 'Shougo/neosnippet-snippets'
 [[plugins]]
 repo = 'Shougo/denite.nvim'
 
+[[plugins]]
+repo = 'Shougo/deol.nvim'
+
 ###########################################################
 #                                                         #
 # General customization                                   #
 #                                                         #
 ###########################################################
+
+[[plugins]]
+# Status/tab bar
+repo = 'vim-airline/vim-airline'
+
+# Sets Airline theme to one, disables whitespace detection,
+# disables Airline extensions, and sets the tmuxline theme
+# to match the Airline theme.
+hook_add = '''
+  let g:airline_theme='one'
+  let g:airline_powerline_fonts = 1
+  let g:airline#extensions#whitespace#enabled = 0
+  let g:airline_extensions = []
+  let g:airline#extensions#tmuxline#enabled = 1
+'''
+
+[[plugins]]
+repo = 'scrooloose/nerdtree'
+
+# Show hidden files, set NERDTree width, and remove space
+# after icons in NERDTree.
+hook_add = '''
+  let g:NERDSpaceDelims = 1
+  let g:NERDTreeShowHidden = 1
+  let g:NERDTreeWinSize= 28
+  let g:WebDevIconsNerdTreeAfterGlyphPadding = ' '
+'''
 
 [[plugins]]
 # Precise colors for Solarized terminals
@@ -56,6 +86,12 @@ repo = 'tpope/vim-commentary'
 [[plugins]]
 # Asynchronous linter for Vim
 repo = 'w0rp/ale'
+# ALE is disabled until enabled manually
+hook_add = '''
+  let g:ale_enabled = 0
+  let g:ale_linters = {'javascript': ['eslint'],'jsx': ['stylelint', 'eslint']}
+  let g:ale_linter_aliases = {'jsx': 'css'}
+'''
 
 [[plugins]]
 # Start screen
@@ -83,35 +119,6 @@ hook_add = '''
 [[plugins]]
 # Auto-closing of bracket pairs
 repo = 'jiangmiao/auto-pairs'
-
-#############################
-
-[[plugins]]
-# Status/tab bar
-repo = 'vim-airline/vim-airline'
-
-# Sets Airline theme to one, disables whitespace detection,
-# disables Airline extensions, and sets the tmuxline theme
-# to match the Airline theme.
-hook_add = '''
-  let g:airline_theme='one'
-  let g:airline_powerline_fonts = 1
-  let g:airline#extensions#whitespace#enabled = 0
-  let g:airline_extensions = []
-  let g:airline#extensions#tmuxline#enabled = 1
-'''
-
-[[plugins]]
-repo = 'scrooloose/nerdtree'
-
-# Show hidden files, set NERDTree width, and remove space
-# after icons in NERDTree.
-hook_add = '''
-  let g:NERDSpaceDelims = 1
-  let g:NERDTreeShowHidden = 1
-  let g:NERDTreeWinSize= 28
-  let g:WebDevIconsNerdTreeAfterGlyphPadding = ' '
-'''
 
 ###########################################################
 #                                                         #
@@ -155,12 +162,42 @@ repo = 'JuliaEditorSupport/julia-vim'
 #                                                         #
 ###########################################################
 
+[[plugins]]
+repo = 'slim-template/vim-slim'
+
+[[plugins]]
+repo = 'pangloss/vim-javascript'
+hook_add = '''
+  let g:javascript_plugin_jsdoc = 1
+'''
+
+[[plugins]]
+repo = 'mxw/vim-jsx'
+
+[[plugins]]
+repo = 'othree/html5.vim'
+
+[[plugins]]
+repo = 'HerringtonDarkholme/yats.vim' # TypeScript
+
+[[plugins]]
+repo = 'nikvdp/ejs-syntax'
+
+[[plugins]]
+repo = 'ElmCast/elm-vim'
+
+[[plugins]]
+repo = 'posva/vim-vue'
+
+[[plugins]]
+repo = 'vim-scripts/promela.vim'
 
 ###########################################################
 #                                                         #
 # Themes                                                  #
 #                                                         #
 ###########################################################
+
 
 [[plugins]]
 # One color scheme, ported from Atom
@@ -172,3 +209,62 @@ hook_add = '''
   set background=dark
 '''
 
+[[plugins]]
+repo = 'arcticicestudio/nord-vim'
+
+[[plugins]]
+repo = 'vim-airline/vim-airline-themes'
+
+###########################################################
+#                                                         #
+# Autocomplete for NeoVim                                 #
+#                                                         #
+###########################################################
+
+[[plugins]]
+repo = 'Shougo/deoplete.nvim'
+
+# Enable deoplete by default
+hook_add = '''
+  if !has('nvim')
+    call dein#add('roxma/nvim-yarp')
+    call dein#add('roxma/vim-hug-neovim-rpc')
+  endif
+
+  let g:deoplete#enable_at_startup = 1
+'''
+
+###########################################################
+#                                                         #
+# Deoplete sources                                        #
+#                                                         #
+###########################################################
+
+[[plugins]]
+repo = 'Shougo/neco-syntax'
+
+[[plugins]]
+repo = 'carlitux/deoplete-ternjs' # Autocomplete for JavaScript
+hook_add = '''
+  let g:deoplete#sources#ternjs#tern_bin = '/usr/local/bin/tern'
+  let g:deoplete#sources#ternjs#timeout = 1
+'''
+
+[[plugins]]
+repo = 'zchee/deoplete-jedi' # Autocomplete for Python
+
+[[plugins]]
+repo = 'zchee/deoplete-go'
+
+[[plugins]]
+repo = 'fszymanski/deoplete-emoji'
+
+###########################################################
+#                                                         #
+# No longer in use                                        #
+#                                                         #
+###########################################################
+
+# repo = 'othree/yajs.vim'
+# repo = 'othree/es.next.syntax.vim'
+# repo = 'jelera/vim-javascript-syntax'
