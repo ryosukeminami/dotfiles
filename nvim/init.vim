@@ -3,44 +3,19 @@ if &compatible
   set nocompatible               " Be iMproved
 endif
 
-" Required:
-set rtp+=$HOME/.cache/dein/repos/github.com/Shougo/dein.vim
+let s:dein_cache_dir = $XDG_CACHE_HOME . '/dein'
+let s:dein_config_dir = $XDG_CONFIG_HOME . '/nvim'
 
 " Required:
-if dein#load_state('~/.cache/dein')
-  call dein#begin('~/.cache/dein')
+set rtp+=/Users/ryosuke/.cache/dein/repos/github.com/Shougo/dein.vim
 
-  " Let dein manage dein
-  " Required:
-  call dein#add('~/.cache/dein/repos/github.com/Shougo/dein.vim')
+" Required:
+if dein#load_state(s:dein_cache_dir)
+  call dein#begin(s:dein_cache_dir)
 
-  " Add or remove your plugins here:
-  call dein#add('Shougo/neosnippet.vim')
-  call dein#add('Shougo/neosnippet-snippets')
-  call dein#add('Shougo/denite.nvim')
+  call dein#load_toml(s:dein_config_dir . '/dein.toml', {'laxy': 0})
 
-  " Custom plugins
-  call dein#add('vim-airline/vim-airline')                     " Status/tab line
-  call dein#add('scrooloose/nerdtree')                         " Tree explorer for files
-  call dein#add('altercation/vim-colors-solarized')            " Precise colors for Solarized terminals
-  call dein#add('tpope/vim-fugitive')                          " Git wrapper for Vim
-  call dein#add('airblade/vim-gitgutter')                      " Shows git diff
-  call dein#add('ctrlpvim/ctrlp.vim')                          " File search for Vim
-  call dein#add('tpope/vim-commentary')                        " Quickly comment lines out
-  call dein#add('w0rp/ale')                                    " Asynchronous linter for Vim
-  call dein#add('mhinz/vim-startify')                          " Start screen
-  call dein#add('ryanoasis/vim-devicons')                      " Use Nerd fonts for icons
-  call dein#add('edkolev/tmuxline.vim')                        " Status line for tmux
-  call dein#add('mileszs/ack.vim')                             " ack and ag in Vim
-  call dein#add('jiangmiao/auto-pairs')                        " Auto-closing of brackets
-
-  " Language support
-  call dein#add('vim-scripts/c.vim')                           " Language support for C/C++
-  call dein#add('python-mode/python-mode')                     " Language support for Python
-  call dein#add('fatih/vim-go', {'do': ':GoUpdateBinaries'})   " Language support for Go
-  call dein#add('ternjs/tern_for_vim', {'do': 'npm install'})  " Language support for JavaScript
-  call dein#add('zah/nim.vim')                                 " Language support for Nim
-  call dein#add('JuliaEditorSupport/julia-vim')                " Language support for Julia
+  " call dein#add('~/.cache/dein/repos/github.com/Shougo/dein.vim')
 
   " Syntax highlighting
   call dein#add('slim-template/vim-slim')                      " Slim syntax highlighting
@@ -54,7 +29,7 @@ if dein#load_state('~/.cache/dein')
   call dein#add('vim-scripts/promela.vim')                     " Syntax highlighting for Promela
 
   " Color schemes
-  call dein#add('rakr/vim-one')                                " One color scheme, ported from Atom
+  " call dein#add('rakr/vim-one')                                " One color scheme, ported from Atom
   call dein#add('mhartington/oceanic-next')                    " Oceanic Next color scheme
   call dein#add('arcticicestudio/nord-vim')                    " An arctic, north-bluish theme for Vim
 
@@ -90,11 +65,6 @@ endif
 " Required:
 filetype plugin indent on
 syntax enable
-
-" If you want to install not installed plugins on startup.
-if dein#check_install()
-  call dein#install()
-endif
 
 "End dein Scripts-------------------------
 
@@ -154,22 +124,7 @@ cnoremap w!! %!sudo tee > /dev/null %
 
 " plugin settings
 let g:ctrlp_match_window = 'order:ttb,max:20'
-let g:NERDSpaceDelims=1
-let g:gitgutter_enabled = 0                                  " Disable GitGutter by default
-let g:NERDTreeShowHidden = 1                                 " Show hidden files in NERDTree
-let g:NERDTreeWinSize= 28                                    " Set NERDTree width
 let g:deoplete#enable_at_startup = 1                         " Enable Deoplete by default
-let g:webdevicons_enable_airline_statusline = 0              " Don't use devicons for Airline
-let g:WebDevIconsNerdTreeAfterGlyphPadding = ' '             " Removes space after icons in NERDTree
-
-" Use The Silver Searcher https://github.com/ggreer/the_silver_searcher
-if executable('ag')
-  " Use Ag over Grep
-  set grepprg=ag\ --nogroup\ --nocolor
-
-  " Use ag in CtrlP for listing files. Lightning fast and respects .gitignore
-  let g:ctrlp_user_command = 'ag %s -l --nocolor -g ""'
-endif
 
 " fdoc is yaml
 autocmd BufRead,BufNewFile *.fdoc set filetype=yaml
@@ -178,13 +133,6 @@ autocmd BufRead,BufNewFile *.fdoc set filetype=yaml
 autocmd BufRead,BufNewFile *.md set filetype=markdown
 autocmd BufRead,BufNewFile *.md set spell
 
-" extra rails.vim help
-autocmd User Rails silent! Rnavcommand decorator      app/decorators            -glob=**/* -suffix=_decorator.rb
-autocmd User Rails silent! Rnavcommand observer       app/observers             -glob=**/* -suffix=_observer.rb
-autocmd User Rails silent! Rnavcommand feature        features                  -glob=**/* -suffix=.feature
-autocmd User Rails silent! Rnavcommand job            app/jobs                  -glob=**/* -suffix=_job.rb
-autocmd User Rails silent! Rnavcommand mediator       app/mediators             -glob=**/* -suffix=_mediator.rb
-autocmd User Rails silent! Rnavcommand stepdefinition features/step_definitions -glob=**/* -suffix=_steps.rb
 " automatically rebalance windows on vim resize
 autocmd VimResized * :wincmd =
 
@@ -207,35 +155,17 @@ vnoremap p "_dP
 let g:deoplete#sources#ternjs#tern_bin = '/usr/local/bin/tern'
 let g:deoplete#sources#ternjs#timeout = 1
 
-" Use tern_for_vim
-let g:tern#command = ["tern"]
-let g:tern#arguments = ["--persistent"]
+" Use tern_for_vi
 
 " Enables syntax highlighting for JSDocs
 let g:javascript_plugin_jsdoc = 1
 
 " Enables syntax highlighting options for Go
-let g:go_highlight_structs = 1 
-let g:go_highlight_methods = 1
-let g:go_highlight_functions = 1
-let g:go_highlight_operators = 1
-let g:go_highlight_build_constraints = 1
-let g:go_highlight_extra_types = 1
+
 
 if (has("termguicolors"))
   set termguicolors                                          " Ensures colors are displayed properly on iTerm
 endif
-
-colorscheme one                                              " Current color scheme
-set background=dark                                          " background is set to dark mode
-" Other installed themes: solarized, oceanicnext, nord
-
-let g:airline_theme='one'                                    " Sets Airline theme
-let g:airline_powerline_fonts = 1                            " Use Powerline fonts
-let g:airline#extensions#whitespace#enabled = 0              " Disables whitespace detection
-let g:airline_extensions = []                                " Disables all Airline extensions
-let g:airline#extensions#tmuxline#enabled = 1                " Sets tmuxline theme to match Airline theme
-" let g:airline#extensions#tabline#enabled = 1               " (disabled) Airline tab bar
 
 " ALE settings
 let g:ale_enabled = 0                                        " ALE is disabled until enabled manually

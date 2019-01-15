@@ -1,0 +1,174 @@
+[[plugins]]
+# Required to allow dein to control dein
+repo = 'Shougo/dein.vim'
+
+###########################################################
+#                                                         #
+# Basic functionality                                     #
+#                                                         #
+###########################################################
+
+[[plugins]]
+repo = 'Shougo/neosnippet.vim'
+
+[[plugins]]
+repo = 'Shougo/neosnippet-snippets'
+
+[[plugins]]
+repo = 'Shougo/denite.nvim'
+
+###########################################################
+#                                                         #
+# General customization                                   #
+#                                                         #
+###########################################################
+
+[[plugins]]
+# Precise colors for Solarized terminals
+repo = 'altercation/vim-colors-solarized'
+
+[[plugins]]
+# Git wrapper for Vim
+repo = 'tpope/vim-fugitive'
+
+[[plugins]]
+# Shows git diff
+repo = 'airblade/vim-gitgutter'
+
+# Disable gitgutter by default
+hook_add = '''
+  let g:gitgutter_enabled = 0
+'''
+
+[[plugins]]
+# File search for Vim
+repo = 'ctrlpvim/ctrlp.vim'
+hook_add = '''
+  if executable('ag')
+    let g:ctrlp_user_command = 'ag %s -l --nocolor -g ""'
+  endif
+'''
+
+[[plugins]]
+# Quick commenting and uncommenting
+repo = 'tpope/vim-commentary'
+
+[[plugins]]
+# Asynchronous linter for Vim
+repo = 'w0rp/ale'
+
+[[plugins]]
+# Start screen
+repo = 'mhinz/vim-startify'
+
+[[plugins]]
+# Use nerd fonts for icons
+repo = 'ryanoasis/vim-devicons'
+
+[[plugins]]
+# Status line for tmux
+repo = 'edkolev/tmuxline.vim'
+
+[[plugins]]
+# ack and ag in Vim
+repo = 'mileszs/ack.vim'
+
+# Use the silver searcher instead of grep
+hook_add = '''
+  if executable('ag')
+    set grepprg=ag\ --nogroup\ --nocolor
+  endif
+'''
+
+[[plugins]]
+# Auto-closing of bracket pairs
+repo = 'jiangmiao/auto-pairs'
+
+#############################
+
+[[plugins]]
+# Status/tab bar
+repo = 'vim-airline/vim-airline'
+
+# Sets Airline theme to one, disables whitespace detection,
+# disables Airline extensions, and sets the tmuxline theme
+# to match the Airline theme.
+hook_add = '''
+  let g:airline_theme='one'
+  let g:airline_powerline_fonts = 1
+  let g:airline#extensions#whitespace#enabled = 0
+  let g:airline_extensions = []
+  let g:airline#extensions#tmuxline#enabled = 1
+'''
+
+[[plugins]]
+repo = 'scrooloose/nerdtree'
+
+# Show hidden files, set NERDTree width, and remove space
+# after icons in NERDTree.
+hook_add = '''
+  let g:NERDSpaceDelims = 1
+  let g:NERDTreeShowHidden = 1
+  let g:NERDTreeWinSize= 28
+  let g:WebDevIconsNerdTreeAfterGlyphPadding = ' '
+'''
+
+###########################################################
+#                                                         #
+# Language support                                        #
+#                                                         #
+###########################################################
+
+[[plugins]]
+repo = 'vim-scripts/c.vim'
+
+[[plugins]]
+repo = 'python-mode/python-mode'
+
+[[plugins]]
+repo = 'fatih/vim-go'
+hook_add = '''
+  let g:go_highlight_structs = 1 
+  let g:go_highlight_methods = 1
+  let g:go_highlight_functions = 1
+  let g:go_highlight_operators = 1
+  let g:go_highlight_build_constraints = 1
+  let g:go_highlight_extra_types = 1
+'''
+
+[[plugins]]
+repo = 'ternjs/tern_for_vim'
+hook_add = '''
+  let g:tern#command = ["tern"]
+  let g:tern#arguments = ["--persistent"]
+'''
+
+[[plugins]]
+repo = 'zah/nim.vim'
+
+[[plugins]]
+repo = 'JuliaEditorSupport/julia-vim'
+
+###########################################################
+#                                                         #
+# Syntax highlighting                                     #
+#                                                         #
+###########################################################
+
+
+###########################################################
+#                                                         #
+# Themes                                                  #
+#                                                         #
+###########################################################
+
+[[plugins]]
+# One color scheme, ported from Atom
+repo = 'rakr/vim-one'
+
+# Set color scheme to one and enable dark mode
+hook_add = '''
+  colorscheme one
+  set background=dark
+'''
+
