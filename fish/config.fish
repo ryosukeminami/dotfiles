@@ -2,7 +2,6 @@ set fish_greeting ""
 export CLICOLOR=1
 export NVM_DIR="$HOME/.nvm"
 export GOPATH=$HOME/Documents/go/
-set PATH /usr/local/anaconda3/bin $PATH
 
 # Language support for Perl
 export LC_CTYPE=en_US.UTF-8
@@ -10,7 +9,7 @@ export LC_ALL=en_US.UTF-8
 
 if not set -q abbrs_initialized
 	set -U abbrs_initialized
-	echo -n Setting abbreviations... 
+	# echo -n Setting abbreviations... 
 
 	# Abbreviations for git
 	abbr ga 'git add'
@@ -66,7 +65,5 @@ if not set -q abbrs_initialized
 	# Desktop Programs
 	abbr f 'open -a Finder '
 
-	abbr gitlab-tunnel "ssh rm264@rm264.host.cs.st-andrews.ac.uk -L 2222:gitlab:22 -N"
-
-	echo 'Done'
+	# echo 'Done'
 end
