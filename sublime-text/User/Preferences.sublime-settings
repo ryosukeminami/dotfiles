@@ -12,6 +12,6 @@
 	"ignored_packages":
 	[
 	],
-	"theme": "Material One Dark.sublime-theme",
-	"scroll_past_end": true
+	"scroll_past_end": true,
+	"theme": "Material One Dark.sublime-theme"
 }

@@ -10,6 +10,8 @@ set rtp+=/Users/ryosuke/.cache/dein/repos/github.com/Shougo/dein.vim
 if dein#load_state(s:dein_cache_dir)
   call dein#begin(s:dein_cache_dir)
 
+  call dein#add('~/.cache/dein/repos/github.com/Shougo/dein.vim')
+
   call dein#load_toml(s:dein_config_dir . '/dein.toml', {'laxy': 0})
 
   call dein#end()

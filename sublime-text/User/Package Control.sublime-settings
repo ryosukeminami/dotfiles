@@ -9,6 +9,8 @@
 		"Dotfiles Syntax Highlighting",
 		"Jedi - Python autocompletion",
 		"Materialize",
-		"Package Control"
+		"Package Control",
+		"TOML",
+		"VimL"
 	]
 }

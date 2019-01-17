@@ -20,11 +20,12 @@ fi
 
 source $ZPLUG_HOME/init.zsh
 
-# zplug "zplug/zplug"
+zplug "zplug/zplug"
 zplug "zsh-users/zsh-completions"
 zplug "zsh-users/zsh-autosuggestions"
 zplug "zsh-users/zsh-syntax-highlighting"
 zplug "zsh-users/zsh-history-substring-search"
+zplug "lib/git", from:oh-my-zsh
 # zplug "lib/completion", from:oh-my-zsh
 # zplug "lib/compfix", from:oh-my-zsh
 # zplug "lib/correction", from:oh-my-zsh
