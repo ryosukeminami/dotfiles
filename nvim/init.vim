@@ -56,7 +56,11 @@ if dein#load_state('~/.cache/dein')
   " Color schemes
   call dein#add('rakr/vim-one')                                " One color scheme, ported from Atom
   call dein#add('mhartington/oceanic-next')                    " Oceanic Next color scheme
+  call dein#add('ayu-theme/ayu-vim')                           " Ayu color scheme for Vim
   call dein#add('arcticicestudio/nord-vim')                    " An arctic, north-bluish theme for Vim
+  call dein#add('drewtempelmeyer/palenight.vim')               " Palenight color scheme for Vim
+  call dein#add('chriskempson/base16-vim')                     " Base 16 theme for Vim
+  call dein#add('dracula/vim')                                 " Dracula theme for Vim
 
   " Airline themes
   call dein#add('vim-airline/vim-airline-themes')
@@ -97,6 +101,16 @@ if dein#check_install()
 endif
 
 "End dein Scripts-------------------------
+
+if (has("termguicolors"))
+  set termguicolors                                          " Ensures colors are displayed properly on iTerm
+endif
+
+let ayucolor="dark"                                          " Use dark version of Ayu color scheme
+
+colorscheme dracula                                          " Current color scheme
+set background=dark                                          " background is set to dark mode
+" Other installed themes: oceanicnext, nord
 
 set rtp+=/usr/local/opt/fzf
 
@@ -178,16 +192,6 @@ autocmd BufRead,BufNewFile *.fdoc set filetype=yaml
 autocmd BufRead,BufNewFile *.md set filetype=markdown
 autocmd BufRead,BufNewFile *.md set spell
 
-" extra rails.vim help
-autocmd User Rails silent! Rnavcommand decorator      app/decorators            -glob=**/* -suffix=_decorator.rb
-autocmd User Rails silent! Rnavcommand observer       app/observers             -glob=**/* -suffix=_observer.rb
-autocmd User Rails silent! Rnavcommand feature        features                  -glob=**/* -suffix=.feature
-autocmd User Rails silent! Rnavcommand job            app/jobs                  -glob=**/* -suffix=_job.rb
-autocmd User Rails silent! Rnavcommand mediator       app/mediators             -glob=**/* -suffix=_mediator.rb
-autocmd User Rails silent! Rnavcommand stepdefinition features/step_definitions -glob=**/* -suffix=_steps.rb
-" automatically rebalance windows on vim resize
-autocmd VimResized * :wincmd =
-
 " fixes syntax highlighting in Vue files
 autocmd FileType vue syntax sync fromstart
 
@@ -222,20 +226,13 @@ let g:go_highlight_operators = 1
 let g:go_highlight_build_constraints = 1
 let g:go_highlight_extra_types = 1
 
-if (has("termguicolors"))
-  set termguicolors                                          " Ensures colors are displayed properly on iTerm
-endif
-
-colorscheme one                                              " Current color scheme
-set background=dark                                          " background is set to dark mode
-" Other installed themes: solarized, oceanicnext, nord
-
+" Various Airline options
 let g:airline_theme='one'                                    " Sets Airline theme
 let g:airline_powerline_fonts = 1                            " Use Powerline fonts
 let g:airline#extensions#whitespace#enabled = 0              " Disables whitespace detection
 let g:airline_extensions = []                                " Disables all Airline extensions
 let g:airline#extensions#tmuxline#enabled = 1                " Sets tmuxline theme to match Airline theme
-" let g:airline#extensions#tabline#enabled = 1               " (disabled) Airline tab bar
+let g:airline#extensions#tabline#enabled = 1               " (disabled) Airline tab bar
 
 " ALE settings
 let g:ale_enabled = 0                                        " ALE is disabled until enabled manually
