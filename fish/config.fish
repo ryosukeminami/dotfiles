@@ -12,6 +12,10 @@ if not set -q abbrs_initialized
 	set -U abbrs_initialized
 	echo -n Setting abbreviations... 
 
+  # Basic abbreviations
+  abbr l 'ls -lah'
+  abbr la 'ls -lAh'
+
 	# Abbreviations for git
 	abbr ga 'git add'
 	abbr gc 'git commit'
@@ -44,6 +48,7 @@ if not set -q abbrs_initialized
 	abbr yu 'yarn upgrade'
 	abbr ys 'yarn start'
 	abbr yd 'yarn run dev'
+  abbr yui 'yarn upgrade-interactive'
 
 	# Abbreviations for npm
 	abbr ns 'npm start'

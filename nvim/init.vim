@@ -108,7 +108,7 @@ endif
 
 let ayucolor="dark"                                          " Use dark version of Ayu color scheme
 
-colorscheme dracula                                          " Current color scheme
+colorscheme one                                              " Current color scheme
 set background=dark                                          " background is set to dark mode
 " Other installed themes: oceanicnext, nord
 
@@ -208,31 +208,31 @@ endif
 vnoremap p "_dP
 
 " Tern for JavaScript language tools
-let g:deoplete#sources#ternjs#tern_bin = '/usr/local/bin/tern'
-let g:deoplete#sources#ternjs#timeout = 1
+let g:deoplete#sources#ternjs#tern_bin='/usr/local/bin/tern'
+let g:deoplete#sources#ternjs#timeout=1
 
 " Use tern_for_vim
-let g:tern#command = ["tern"]
-let g:tern#arguments = ["--persistent"]
+let g:tern#command=["tern"]
+let g:tern#arguments=["--persistent"]
 
 " Enables syntax highlighting for JSDocs
-let g:javascript_plugin_jsdoc = 1
+let g:javascript_plugin_jsdoc=1
 
 " Enables syntax highlighting options for Go
-let g:go_highlight_structs = 1 
-let g:go_highlight_methods = 1
-let g:go_highlight_functions = 1
-let g:go_highlight_operators = 1
-let g:go_highlight_build_constraints = 1
-let g:go_highlight_extra_types = 1
+let g:go_highlight_structs=1
+let g:go_highlight_methods=1
+let g:go_highlight_functions=1
+let g:go_highlight_operators=1
+let g:go_highlight_build_constraints=1
+let g:go_highlight_extra_types=1
 
 " Various Airline options
 let g:airline_theme='one'                                    " Sets Airline theme
-let g:airline_powerline_fonts = 1                            " Use Powerline fonts
-let g:airline#extensions#whitespace#enabled = 0              " Disables whitespace detection
-let g:airline_extensions = []                                " Disables all Airline extensions
-let g:airline#extensions#tmuxline#enabled = 1                " Sets tmuxline theme to match Airline theme
-let g:airline#extensions#tabline#enabled = 1               " (disabled) Airline tab bar
+let g:airline_powerline_fonts=1                              " Use Powerline fonts
+let g:airline#extensions#whitespace#enabled=0                " Disables whitespace detection
+let g:airline_extensions=[]                                  " Disables all Airline extensions
+let g:airline#extensions#tmuxline#enabled=1                  " Sets tmuxline theme to match Airline theme
+let g:airline#extensions#tabline#enabled=1                   " Airline tab bar
 
 " ALE settings
 let g:ale_enabled = 0                                        " ALE is disabled until enabled manually
