@@ -7,11 +7,13 @@
 		}
 	],
 	"color_scheme": "Packages/Materialize/schemes/Material One Dark.tmTheme",
-	"font_face": "Fira Code",
+	"font_face": "Hack",
 	"font_size": 15,
 	"ignored_packages":
 	[
 	],
+	"line_padding_bottom": 2,
 	"scroll_past_end": true,
+	"highlight_line": true,
 	"theme": "Material One Dark.sublime-theme"
 }

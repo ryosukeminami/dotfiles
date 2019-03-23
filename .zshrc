@@ -1,3 +1,5 @@
+# zsh configuration
+setopt auto_cd
 HYPHEN_INSENSITIVE='true'
 # unsetopt correct_all
 zstyle ':completion:*' matcher-list 'm:{a-zA-Z}={A-Za-z}'

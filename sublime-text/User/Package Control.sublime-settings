@@ -7,6 +7,8 @@
 	[
 		"Babel",
 		"Dotfiles Syntax Highlighting",
+		"Elm Language Support",
+		"Hermes",
 		"Jedi - Python autocompletion",
 		"Materialize",
 		"Package Control"

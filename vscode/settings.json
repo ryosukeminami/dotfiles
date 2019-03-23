@@ -9,7 +9,7 @@
     "workbench.startupEditor": "newUntitledFile",
     "git.enableSmartCommit": true,
     "workbench.statusBar.visible": true,
-    "workbench.iconTheme": "eq-material-theme-icons-darker",
+    "workbench.iconTheme": "ayu",
     "workbench.activityBar.visible": false,
     "workbench.colorTheme": "Ayu Mirage",
     "workbench.sideBar.location": "left",
@@ -45,6 +45,8 @@
     "java.jdt.ls.vmargs": "-noverify -Xmx1G -XX:+UseG1GC -XX:+UseStringDeduplication -javaagent:\"/Users/ryosuke/.vscode/extensions/gabrielbb.vscode-lombok-0.9.6/server/lombok.jar\" -Xbootclasspath/a:\"/Users/ryosuke/.vscode/extensions/gabrielbb.vscode-lombok-0.9.6/server/lombok.jar\"",
     "java.errors.incompleteClasspath.severity": "ignore",
     "python.linting.enabled": false,
-    "editor.formatOnSave": true,
-    "python.condaPath": "/usr/local/anaconda3/bin/conda"
+    "python.condaPath": "/usr/local/anaconda3/bin/conda",
+    "editor.suggestSelection": "first",
+    "vsintellicode.modify.editor.suggestSelection": "automaticallyOverrodeDefaultValue",
+    "python.jediEnabled": false
 }
