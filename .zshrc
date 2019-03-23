@@ -8,7 +8,7 @@ GEOMETRY_COLOR_PROMPT=blue                       # Changes prompt symbol color
 PROMPT_GEOMETRY_EXEC_TIME=true                   # Displays process time for long commands
 PROMPT_GEOMETRY_GIT_SHOW_STASHES=false           # Disables stash symbol for git plugin
 PROMPT_GEOMETRY_GIT_TIME=false                   # Disables time since last commit
-PROMPT_GEOMETRY_GIT_CONFLICTS=true               # Enables git conflicts icon
+# PROMPT_GEOMETRY_GIT_CONFLICTS=true               # Enables git conflicts icon
 
 
 # If the OS is MacOS, use "usr/local/opt/zplug"
@@ -25,15 +25,15 @@ zplug "zsh-users/zsh-completions"
 zplug "zsh-users/zsh-autosuggestions"
 zplug "zsh-users/zsh-syntax-highlighting"
 zplug "zsh-users/zsh-history-substring-search"
-# zplug "lib/completion", from:oh-my-zsh
-# zplug "lib/compfix", from:oh-my-zsh
-# zplug "lib/correction", from:oh-my-zsh
+zplug "lib/completion", from:oh-my-zsh
+zplug "lib/compfix", from:oh-my-zsh
+zplug "lib/correction", from:oh-my-zsh
 zplug "lib/directories", from:oh-my-zsh          # Includes aliases such as '...' for '../..'
+zplug "lib/history", from:oh-my-zsh
 zplug "plugins/git", from:oh-my-zsh              # Includes alias such as 'ga' for 'git add'
 zplug "plugins/github", from:oh-my-zsh
 zplug "plugins/command-not-found", from:oh-my-zsh
 zplug "plugins/gitignore", from:oh-my-zsh
-zplug "plugins/osx", from:oh-my-zsh
 zplug "plugins/tmux", from:oh-my-zsh
 zplug "plugins/man", from:oh-my-zsh
 zplug "plugins/npm", from:oh-my-zsh
@@ -41,7 +41,10 @@ zplug "plugins/pip", from:oh-my-zsh
 zplug "plugins/xcode", from:oh-my-zsh
 zplug "plugins/yarn", from:oh-my-zsh
 
-zplug "geometry-zsh/geometry"
+# zplug "mafredri/zsh-async", from:github
+# zplug "sindresorhus/pure", use:pure.zsh, from:github, as:theme
+
+zplug "geometry-zsh/geometry", as:theme
 
 # Check OS version
 # if [[ -f /etc/os-release ]]; then
@@ -54,14 +57,16 @@ zplug "geometry-zsh/geometry"
 # fi
 
 # Install packages that have not been installed yet
-# if ! zplug check --verbose; then
-#     printf "Install? [y/N]: "
-#     if read -q; then
-#         echo; zplug install
-#     else
-#         echo
-#     fi
-# fi
+if ! zplug check --verbose; then
+    printf "Install? [y/N]: "
+    if read -q; then
+        echo; zplug install
+    else
+        echo
+    fi
+fi
+
+
 
 zplug load
 
@@ -92,9 +97,10 @@ export PATH=$PATH:$ANDROID_HOME/tools/bin
 export PATH=$PATH:$ANDROID_HOME/platform-tools
 
 # ruby setup
-eval "$(rbenv init -)"
+# eval "$(rbenv init -)"
 
 export PATH=/usr/local/bin:$PATH
+export PATH=/usr/local/sbin:$PATH
 
 if [[ -f $HOME/.aliases ]]; then
     source $HOME/.aliases

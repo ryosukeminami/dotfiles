@@ -42,7 +42,8 @@ alias csa='conda activate'
 alias csd='conda deactivate'
 
 # Alias for Jupyter notebook
-alias jn='jupyter notebook'
+alias jn='python -m jupyter notebook'
+alias jl='python -m jupyter lab'
 
 # Just to be lazy
 alias x='exit'
