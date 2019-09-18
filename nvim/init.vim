@@ -41,6 +41,7 @@ if dein#load_state('~/.cache/dein')
   call dein#add('ternjs/tern_for_vim', {'do': 'npm install'})  " Language support for JavaScript
   call dein#add('zah/nim.vim')                                 " Language support for Nim
   call dein#add('JuliaEditorSupport/julia-vim')                " Language support for Julia
+  call dein#add('udalov/kotlin-vim')                           " Language support for Kotlin
 
   " Syntax highlighting
   call dein#add('slim-template/vim-slim')                      " Slim syntax highlighting
@@ -119,6 +120,7 @@ set autoread                                                 " reload files when
 set backspace=2                                              " Fix broken backspace in some setups
 set backupcopy=yes                                           " see :help crontab
 set clipboard=unnamed                                        " yank and paste with the system clipboard
+set cursorline                                               " highlight the current line
 set directory-=.                                             " don't store swapfiles in the current directory
 set encoding=utf-8
 set expandtab                                                " expand tabs to spaces
@@ -230,9 +232,10 @@ let g:go_highlight_extra_types=1
 let g:airline_theme='one'                                    " Sets Airline theme
 let g:airline_powerline_fonts=1                              " Use Powerline fonts
 let g:airline#extensions#whitespace#enabled=0                " Disables whitespace detection
-let g:airline_extensions=[]                                  " Disables all Airline extensions
+" let g:airline_extensions=[]                                  " Disables all Airline extensions
 let g:airline#extensions#tmuxline#enabled=1                  " Sets tmuxline theme to match Airline theme
 let g:airline#extensions#tabline#enabled=1                   " Airline tab bar
+let g:airline#extensions#tabline#formatter='unique_tail'
 
 " ALE settings
 let g:ale_enabled = 0                                        " ALE is disabled until enabled manually
