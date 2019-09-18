@@ -5,12 +5,18 @@
 	],
 	"installed_packages":
 	[
+		"A File Icon",
+		"ayu",
 		"Babel",
 		"Dotfiles Syntax Highlighting",
-		"Elm Language Support",
+		"Elm Syntax Highlighting",
 		"Hermes",
 		"Jedi - Python autocompletion",
 		"Materialize",
-		"Package Control"
+		"Package Control",
+		"Sass",
+		"SublimeLinter-tslint",
+		"Theme - City Lights",
+		"TypeScript"
 	]
 }

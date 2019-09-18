@@ -6,7 +6,8 @@ module.exports = {
     config: {
         verminal: {
             fontFamily: '"MesloLGSDZ Nerd Font"',
-            fontSize: 15
+            fontSize: 15,
+            backgroundColor: 'rgba(0, 0, 0, 0.4)'
         },
 
         // Choose either "stable" for receiving highly polished,
@@ -17,14 +18,17 @@ module.exports = {
         cursorShape: 'BLOCK',
 
         // set to true for blinking cursor
-        cursorBlink: false,
+        cursorBlink: true,
+
+        // Background color
+        // backgroundColor: '#000',
 
         // custom padding (css format, i.e.: `top right bottom left`)
-        padding: '14px 14px 14px 14px',
+        // padding: '14px 14px 14px 14px',
 
         // the shell to run when spawning a new session (i.e. /usr/local/bin/fish)
         // if left empty, your system's login shell will be used by default
-        shell: '/usr/local/bin/fish',
+        // shell: '/usr/local/bin/fish',
 
         // for environment variables
         env: {},
@@ -43,7 +47,10 @@ module.exports = {
     // format: [@org/]project[#version]
     // examples:
     //   `hyperpower`
-    plugins: ["hypercwd", "hyper-snazzy", "verminal"],
+    // 	 `verminal`
+    //   `hypercwd`
+    //   `hyper-snazzy`
+    plugins: ["verminal", "hypercwd"],
 
-    // Notes: "hyper-statusline" must be last in the list for the color scheme to apply 
+    // Notes: "hyper-statusline" must be last in the list for the color scheme to apply
 };
