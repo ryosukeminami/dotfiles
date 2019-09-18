@@ -30,7 +30,12 @@ alias ni='npm install'
 alias nu='npm upgrade'
 alias nb='npm build'
 alias nd='npm run dev'
-alias ngui='npm-check -gui'
+
+# Upgrade global package
+alias ngu='npm-check -gy'
+
+# Upgrade global packages interactively
+alias ngui='npm-check -gu'
 
 # Aliases for Python
 alias pi='pip install'
