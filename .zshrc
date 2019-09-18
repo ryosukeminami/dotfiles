@@ -40,8 +40,11 @@ zplug "plugins/tmux", from:oh-my-zsh
 zplug "plugins/man", from:oh-my-zsh
 zplug "plugins/npm", from:oh-my-zsh
 zplug "plugins/pip", from:oh-my-zsh
-zplug "plugins/xcode", from:oh-my-zsh
 zplug "plugins/yarn", from:oh-my-zsh
+
+# if [ "$(uname 2> /dev/null)" = "Darwin" ]; then
+#     zplug "plugins/xcode", from:oh-my-zsh
+# fi
 
 # zplug "mafredri/zsh-async", from:github
 # zplug "sindresorhus/pure", use:pure.zsh, from:github, as:theme
@@ -59,16 +62,14 @@ zplug "geometry-zsh/geometry", as:theme
 # fi
 
 # Install packages that have not been installed yet
-if ! zplug check --verbose; then
-    printf "Install? [y/N]: "
-    if read -q; then
-        echo; zplug install
-    else
-        echo
-    fi
-fi
-
-
+# if ! zplug check --verbose; then
+#     printf "Install? [y/N]: "
+#     if read -q; then
+#         echo; zplug install
+#     else
+#         echo
+#     fi
+# fi
 
 zplug load
 
@@ -88,18 +89,15 @@ export GOPATH=$HOME/Documents/go
 
 # golang setup
 export PATH=/usr/local/go/bin:$GOPATH/bin:$PATH
-export PATH=/usr/local/opt/openssl@1.1/bin:$PATH
-export PATH=HOME/.local/bin:$PATH
+# export PATH=/usr/local/opt/openssl@1.1/bin:$PATH
+# export PATH=HOME/.local/bin:$PATH
 export PATH=/usr/local/opt/go/libexec/bin:$PATH
 
 # Android development command line tools
 export ANDROID_HOME=$HOME/Library/Android/sdk
-export PATH=$PATH:$ANDROID_HOME/tools
-export PATH=$PATH:$ANDROID_HOME/tools/bin
-export PATH=$PATH:$ANDROID_HOME/platform-tools
-
-# ruby setup
-# eval "$(rbenv init -)"
+# export PATH=$PATH:$ANDROID_HOME/tools
+# export PATH=$PATH:$ANDROID_HOME/tools/bin
+# export PATH=$PATH:$ANDROID_HOME/platform-tools
 
 export PATH=/usr/local/bin:$PATH
 export PATH=/usr/local/sbin:$PATH
