@@ -7,11 +7,13 @@
     "editor.rulers": [
         80
     ],
+    "emmet.includeLanguages": {
+        "javascript": "javascriptreact"
+     },
     "window.zoomLevel": 0,
     "workbench.startupEditor": "newUntitledFile",
     "git.enableSmartCommit": true,
     "workbench.statusBar.visible": false,
-    "workbench.iconTheme": "ayu",
     "workbench.activityBar.visible": true,
     "workbench.colorTheme": "Ayu Mirage",
     "workbench.sideBar.location": "left",
@@ -34,7 +36,6 @@
     "editor.multiCursorModifier": "ctrlCmd",
     "java.home": "/Library/Java/JavaVirtualMachines/openjdk-12.0.2.jdk/Contents/Home",
     "java.trace.server":"verbose",
-    "java.jdt.ls.vmargs":"-noverify -Xmx1G -XX:+UseG1GC -XX:+UseStringDeduplication -Dlog.level=ALL",
     "materialTheme.autoApplyIcons": false,
     "java.jdt.ls.vmargs": "-noverify -Xmx1G -XX:+UseG1GC -XX:+UseStringDeduplication -javaagent:\"/Users/ryosuke/.vscode/extensions/gabrielbb.vscode-lombok-0.9.6/server/lombok.jar\" -Xbootclasspath/a:\"/Users/ryosuke/.vscode/extensions/gabrielbb.vscode-lombok-0.9.6/server/lombok.jar\"",
     "java.errors.incompleteClasspath.severity": "ignore",
@@ -61,7 +62,14 @@
     },
     "[go]": {
         "editor.formatOnSave": false
-    },    
-    "materialTheme.accent": "Remove accents",
+    },
+    "[python]": {
+        "editor.tabSize": 4
+    },
     "editor.wordWrap": "on",
+    "terminal.integrated.inheritEnv": false,
+    "workbench.tree.renderIndentGuides": "none",
+    "workbench.tree.indent": 16,
+    "kite.showWelcomeNotificationOnStartup": false,
+    "workbench.iconTheme": "ayu",
 }
