@@ -72,4 +72,5 @@
     "workbench.tree.indent": 16,
     "kite.showWelcomeNotificationOnStartup": false,
     "workbench.iconTheme": "ayu",
+    "vetur.format.defaultFormatter.html": "none",
 }
