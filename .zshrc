@@ -1,3 +1,5 @@
+zmodload zsh/zprof
+
 # zsh configuration
 setopt auto_cd
 HYPHEN_INSENSITIVE='true'
@@ -28,19 +30,19 @@ zplug "zsh-users/zsh-autosuggestions"
 zplug "zsh-users/zsh-syntax-highlighting"
 zplug "zsh-users/zsh-history-substring-search"
 zplug "lib/completion", from:oh-my-zsh
-zplug "lib/compfix", from:oh-my-zsh
+# zplug "lib/compfix", from:oh-my-zsh
 zplug "lib/correction", from:oh-my-zsh
 zplug "lib/directories", from:oh-my-zsh          # Includes aliases such as '...' for '../..'
 zplug "lib/history", from:oh-my-zsh
 zplug "plugins/git", from:oh-my-zsh              # Includes alias such as 'ga' for 'git add'
-zplug "plugins/github", from:oh-my-zsh
-zplug "plugins/command-not-found", from:oh-my-zsh
-zplug "plugins/gitignore", from:oh-my-zsh
-zplug "plugins/tmux", from:oh-my-zsh
-zplug "plugins/man", from:oh-my-zsh
-zplug "plugins/npm", from:oh-my-zsh
-zplug "plugins/pip", from:oh-my-zsh
-zplug "plugins/yarn", from:oh-my-zsh
+# zplug "plugins/github", from:oh-my-zsh
+# zplug "plugins/command-not-found", from:oh-my-zsh
+# zplug "plugins/gitignore", from:oh-my-zsh
+# zplug "plugins/tmux", from:oh-my-zsh
+# zplug "plugins/man", from:oh-my-zsh
+# zplug "plugins/npm", from:oh-my-zsh
+# zplug "plugins/pip", from:oh-my-zsh
+# zplug "plugins/yarn", from:oh-my-zsh
 
 # if [ "$(uname 2> /dev/null)" = "Darwin" ]; then
 #     zplug "plugins/xcode", from:oh-my-zsh
@@ -50,6 +52,8 @@ zplug "plugins/yarn", from:oh-my-zsh
 # zplug "sindresorhus/pure", use:pure.zsh, from:github, as:theme
 
 zplug "geometry-zsh/geometry", as:theme
+# zplug "mafredri/zsh-async", from:github
+# zplug "sindresorhus/pure", use:pure.zsh, from:github, as:theme
 
 # Check OS version
 # if [[ -f /etc/os-release ]]; then
@@ -73,6 +77,12 @@ zplug "geometry-zsh/geometry", as:theme
 
 zplug load
 
+autoload -Uz compinit
+for dump in ~/.zcompdump(N.mh+24); do
+  compinit
+done
+compinit -C
+
 export KEYTIMEOUT=1
 export TERMINAL_DARK=1
 export TERM=xterm-256color
@@ -89,7 +99,6 @@ export GOPATH=$HOME/Documents/go
 
 # golang setup
 export PATH=/usr/local/go/bin:$GOPATH/bin:$PATH
-# export PATH=/usr/local/opt/openssl@1.1/bin:$PATH
 # export PATH=HOME/.local/bin:$PATH
 export PATH=/usr/local/opt/go/libexec/bin:$PATH
 
@@ -109,5 +118,4 @@ fi
 if [[ -f $HOME/.zshrc.local ]]; then
     source $HOME/.zshrc.local
 fi
-
-
+[ -f "${GHCUP_INSTALL_BASE_PREFIX:=$HOME}/.ghcup/env" ] && source "${GHCUP_INSTALL_BASE_PREFIX:=$HOME}/.ghcup/env"
