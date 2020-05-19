@@ -15,7 +15,7 @@
     "git.enableSmartCommit": true,
     "workbench.statusBar.visible": false,
     "workbench.activityBar.visible": true,
-    "workbench.colorTheme": "Ayu Mirage",
+    "workbench.colorTheme": "Tokyo Night",
     "workbench.sideBar.location": "left",
     "terminal.external.osxExec": "iTerm.app",
     "terminal.integrated.fontFamily": "Fira Code",
@@ -34,7 +34,6 @@
     "julia.executablePath": "/usr/local/bin/julia",
     "editor.minimap.enabled": false,
     "editor.multiCursorModifier": "ctrlCmd",
-    "java.home": "/Library/Java/JavaVirtualMachines/openjdk-12.0.2.jdk/Contents/Home",
     "java.trace.server":"verbose",
     "materialTheme.autoApplyIcons": false,
     "java.jdt.ls.vmargs": "-noverify -Xmx1G -XX:+UseG1GC -XX:+UseStringDeduplication -javaagent:\"/Users/ryosuke/.vscode/extensions/gabrielbb.vscode-lombok-0.9.6/server/lombok.jar\" -Xbootclasspath/a:\"/Users/ryosuke/.vscode/extensions/gabrielbb.vscode-lombok-0.9.6/server/lombok.jar\"",
@@ -71,5 +70,5 @@
     "workbench.tree.renderIndentGuides": "none",
     "workbench.tree.indent": 16,
     "kite.showWelcomeNotificationOnStartup": false,
-    "workbench.iconTheme": "ayu",
+    "workbench.iconTheme": "material-icon-theme",
 }
