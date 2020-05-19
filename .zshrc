@@ -43,11 +43,6 @@ zplug "plugins/git", from:oh-my-zsh              # Includes alias such as 'ga' f
 # zplug "plugins/npm", from:oh-my-zsh
 # zplug "plugins/pip", from:oh-my-zsh
 # zplug "plugins/yarn", from:oh-my-zsh
-
-# if [ "$(uname 2> /dev/null)" = "Darwin" ]; then
-#     zplug "plugins/xcode", from:oh-my-zsh
-# fi
-
 # zplug "mafredri/zsh-async", from:github
 # zplug "sindresorhus/pure", use:pure.zsh, from:github, as:theme
 
@@ -58,11 +53,6 @@ zplug "geometry-zsh/geometry", as:theme
 # Check OS version
 # if [[ -f /etc/os-release ]]; then
 #     . /etc/os-release
-# fi
-
-# Because zsh-syntax-highlighting crashes the terminal in Scientific Linux for some reason
-# if [[ $NAME != "Scientific Linux" ]]; then
-#     zplug "plugins/zsh-syntax-highlighting", from:oh-my-zsh
 # fi
 
 # Install packages that have not been installed yet
