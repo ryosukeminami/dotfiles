@@ -107,10 +107,10 @@ if (has("termguicolors"))
   set termguicolors                                          " Ensures colors are displayed properly on iTerm
 endif
 
-let ayucolor="dark"                                          " Use dark version of Ayu color scheme
+" let ayucolor="dark"                                          " Use dark version of Ayu color scheme
 
 colorscheme one                                              " Current color scheme
-set background=dark                                          " background is set to dark mode
+" set background=dark                                          " background is set to dark mode
 " Other installed themes: oceanicnext, nord
 
 set rtp+=/usr/local/opt/fzf
