@@ -64,3 +64,7 @@ alias f='open -a Finder '
 alias fh='open -a Finder .'
 
 alias apps='open -a Finder /Applications'
+
+# Newer version of Python
+alias python39='/usr/local/opt/python@3.9/libexec/bin/python'
+
