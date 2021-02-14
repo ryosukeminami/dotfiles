@@ -1,3 +1,10 @@
+# Enable Powerlevel10k instant prompt. Should stay close to the top of ~/.zshrc.
+# Initialization code that may require console input (password prompts, [y/n]
+# confirmations, etc.) must go above this block; everything else may go below.
+if [[ -r "${XDG_CACHE_HOME:-$HOME/.cache}/p10k-instant-prompt-${(%):-%n}.zsh" ]]; then
+  source "${XDG_CACHE_HOME:-$HOME/.cache}/p10k-instant-prompt-${(%):-%n}.zsh"
+fi
+
 zmodload zsh/zprof
 
 # zsh configuration
@@ -30,30 +37,22 @@ zplug "zsh-users/zsh-autosuggestions"
 zplug "zsh-users/zsh-syntax-highlighting"
 zplug "zsh-users/zsh-history-substring-search"
 zplug "lib/completion", from:oh-my-zsh
-# zplug "lib/compfix", from:oh-my-zsh
+zplug "lib/compfix", from:oh-my-zsh
 zplug "lib/correction", from:oh-my-zsh
 zplug "lib/directories", from:oh-my-zsh          # Includes aliases such as '...' for '../..'
 zplug "lib/history", from:oh-my-zsh
 zplug "plugins/git", from:oh-my-zsh              # Includes alias such as 'ga' for 'git add'
-# zplug "plugins/github", from:oh-my-zsh
-# zplug "plugins/command-not-found", from:oh-my-zsh
-# zplug "plugins/gitignore", from:oh-my-zsh
-# zplug "plugins/tmux", from:oh-my-zsh
-# zplug "plugins/man", from:oh-my-zsh
-# zplug "plugins/npm", from:oh-my-zsh
-# zplug "plugins/pip", from:oh-my-zsh
-# zplug "plugins/yarn", from:oh-my-zsh
+zplug "plugins/github", from:oh-my-zsh
+zplug "plugins/command-not-found", from:oh-my-zsh
+zplug "plugins/gitignore", from:oh-my-zsh
+zplug "plugins/npm", from:oh-my-zsh
+zplug "plugins/pip", from:oh-my-zsh
+zplug "plugins/yarn", from:oh-my-zsh
+
+# zplug "geometry-zsh/geometry", as:theme
+zplug "romkatv/powerlevel10k", as:theme, depth:1
 # zplug "mafredri/zsh-async", from:github
 # zplug "sindresorhus/pure", use:pure.zsh, from:github, as:theme
-
-zplug "geometry-zsh/geometry", as:theme
-# zplug "mafredri/zsh-async", from:github
-# zplug "sindresorhus/pure", use:pure.zsh, from:github, as:theme
-
-# Check OS version
-# if [[ -f /etc/os-release ]]; then
-#     . /etc/os-release
-# fi
 
 # Install packages that have not been installed yet
 # if ! zplug check --verbose; then
@@ -89,14 +88,8 @@ export GOPATH=$HOME/Documents/go
 
 # golang setup
 export PATH=/usr/local/go/bin:$GOPATH/bin:$PATH
-# export PATH=HOME/.local/bin:$PATH
+export PATH=$HOME/.local/bin:$PATH
 export PATH=/usr/local/opt/go/libexec/bin:$PATH
-
-# Android development command line tools
-export ANDROID_HOME=$HOME/Library/Android/sdk
-# export PATH=$PATH:$ANDROID_HOME/tools
-# export PATH=$PATH:$ANDROID_HOME/tools/bin
-# export PATH=$PATH:$ANDROID_HOME/platform-tools
 
 export PATH=/usr/local/bin:$PATH
 export PATH=/usr/local/sbin:$PATH
@@ -108,4 +101,6 @@ fi
 if [[ -f $HOME/.zshrc.local ]]; then
     source $HOME/.zshrc.local
 fi
-[ -f "${GHCUP_INSTALL_BASE_PREFIX:=$HOME}/.ghcup/env" ] && source "${GHCUP_INSTALL_BASE_PREFIX:=$HOME}/.ghcup/env"
+
+# To customize prompt, run `p10k configure` or edit ~/.p10k.zsh.
+[[ ! -f ~/.p10k.zsh ]] || source ~/.p10k.zsh
